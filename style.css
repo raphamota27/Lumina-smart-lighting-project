@@ -1,0 +1,264 @@
+/* 1. Variáveis de Cores e Configurações */
+:root {
+    --bg-color: #0a0a0c;
+    --surface-color: #16161a;
+    --accent-color: #3b82f6; /* Azul Tech */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* 2. Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* 3. Navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(10, 10, 12, 0.8);
+    backdrop-filter: blur(10px); /* Efeito de vidro */
+    z-index: 1000;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* 4. Hero Section */
+#hero {
+    display: flex; /* Transforma em Flexbox */
+    align-items: center; /* Alinha o texto e a imagem verticalmente no centro */
+    justify-content: space-between; /* Dá o espaço máximo entre eles */
+    gap: 80px; /* Garante que eles não grudem em telas médias */
+    min-height: 80vh; /* Garante que a seção ocupe quase a tela toda */
+}
+
+.badge {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 20px 0;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+#hero p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+.hero-content {
+    flex: 1; /* Faz o texto ocupar 50% da largura */
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.hero-image-container {
+    flex: 1; /* Faz a imagem ocupar os outros 50% */
+    display: flex;
+    justify-content: flex-end; /* Empurra a imagem para a direita */
+}
+
+.hero-image {
+    width: 100%; /* Em vez de max-width 90%, use 100% para preencher o container */
+    max-width: 550px; /* Mas não deixe ela ficar gigantesca em monitores UltraWide */
+    height: auto;
+    border-radius: 20px; /* Bordas arredondadas dão o tom moderno */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4); /* Sombra para dar profundidade */
+}
+
+/* 5. Features Section */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--surface-color);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* 6. Form Section */
+.form-wrapper {
+    background: var(--surface-color);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+input {
+    width: 100%;
+    background: #000;
+    border: 1px solid var(--glass-border);
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--accent-color);
+}
+
+.btn-submit {
+    width: 100%;
+    background: var(--accent-color);
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* 7. Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column; /* Coloca um embaixo do outro */
+        text-align: center; /* Centraliza o texto */
+        padding-top: 120px; /* Dá espaço para a Navbar fixa */
+    }
+
+    .hero-btns {
+        justify-content: center; /* Centraliza os botões no mobile */
+    }
+
+    #hero p {
+        margin-left: auto;
+        margin-right: auto; /* Centraliza o parágrafo que tem max-width */
+    }
+    
+    .hero-image-container {
+        justify-content: center; /* Centraliza a imagem no mobile */
+    }
+    h1 { font-size: 2.5rem; }
+    
+}
