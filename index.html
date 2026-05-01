@@ -90,3 +90,95 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lumina - The ultimate smart lamp for developers and creators.">
+    <title>Lumina | Smart Lighting for Productivity</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="/" class="logo">LUMINA</a>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#order-form" class="cta-mini">Order Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="container">
+            <div class="hero-content">
+                <span class="badge">New Release 2026</span>
+                <h1>Illuminate Your <span class="highlight">Productivity</span></h1>
+                <p>A minimalist smart lamp designed for creators and engineers. Full control at your fingertips.</p>
+                <div class="hero-btns">
+                    <a href="#order-form" class="btn-primary" role="button">Get Your Lumina Now</a>
+                    <a href="#features" class="btn-secondary" role="button">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="img/500x500.png" loading="lazy" alt="Lumina minimalist smart lamp on a wooden desk with a laptop" class="hero-image">
+            </div>
+        </section>
+
+        <section id="features" class="container">
+            <h2 class="section-title">Designed for Performance</h2>
+            <div class="features-grid">
+                <article class="card">
+                    <div class="icon" aria-hidden="true">💡</div>
+                    <h3>Eye-Care Tech</h3>
+                    <p>Zero flicker, preventing eye strain during long coding sessions.</p>
+                </article>
+
+                <article class="card">
+                    <div class="icon" aria-hidden="true">👆</div>
+                    <h3>Touch Control</h3>
+                    <p>Seamlessly adjust brightness and color temperature with a simple slide.</p>
+                </article>
+
+                <article class="card">
+                    <div class="icon" aria-hidden="true">⚡</div>
+                    <h3>Wireless Charging</h3>
+                    <p>Fast-charge your smartphone while you work. No more messy cables.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="order-form" class="container">
+            <div class="form-wrapper">
+                <h2>Start your upgrade today</h2>
+                <p>Join 10,000+ engineers using Lumina.</p>
+                
+                <form id="purchase-form" onsubmit="event.preventDefault(); sendOrder();">
+                    <div class="input-group">
+                        <label for="custName">Full Name</label>
+                        <input type="text" id="custName" name="customer_name" autocomplete="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="custEmail">Email Address</label>
+                        <input type="email" id="custEmail" name="customer_email" autocomplete="email" placeholder="your@email.com" required>
+                    </div>
+                    <form id="purchase-form" onsubmit="event.preventDefault(); sendOrder();">
+                        <button type="submit" class="btn-submit">Confirm Purchase</button>
+                    </form>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lumina Tech. Built by Silver.</p>
+    </footer>
+
+</body>
+</html>
