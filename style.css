@@ -1,15 +1,15 @@
-/* 1. Variáveis de Cores e Configurações */
+
 :root {
     --bg-color: #0a0a0c;
     --surface-color: #16161a;
-    --accent-color: #3b82f6; /* Azul Tech */
+    --accent-color: #3b82f6; 
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
     --glass-border: rgba(255, 255, 255, 0.1);
     --transition: all 0.3s ease;
 }
 
-/* 2. Reset e Base */
+
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +33,7 @@ body {
     padding: 80px 20px;
 }
 
-/* 3. Navegação */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -43,7 +43,7 @@ body {
     width: 100%;
     top: 0;
     background: rgba(10, 10, 12, 0.8);
-    backdrop-filter: blur(10px); /* Efeito de vidro */
+    backdrop-filter: blur(10px); 
     z-index: 1000;
     border-bottom: 1px solid var(--glass-border);
 }
@@ -68,13 +68,13 @@ nav a:hover {
     color: var(--accent-color);
 }
 
-/* 4. Hero Section */
+
 #hero {
-    display: flex; /* Transforma em Flexbox */
-    align-items: center; /* Alinha o texto e a imagem verticalmente no centro */
-    justify-content: space-between; /* Dá o espaço máximo entre eles */
-    gap: 80px; /* Garante que eles não grudem em telas médias */
-    min-height: 80vh; /* Garante que a seção ocupe quase a tela toda */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 80px; 
+    min-height: 80vh; 
 }
 
 .badge {
@@ -106,7 +106,7 @@ h1 {
 }
 
 .hero-content {
-    flex: 1; /* Faz o texto ocupar 50% da largura */
+    flex: 1; 
 }
 
 .hero-btns {
@@ -139,20 +139,19 @@ h1 {
 }
 
 .hero-image-container {
-    flex: 1; /* Faz a imagem ocupar os outros 50% */
+    flex: 1; 
     display: flex;
-    justify-content: flex-end; /* Empurra a imagem para a direita */
+    justify-content: flex-end; 
 }
 
 .hero-image {
-    width: 100%; /* Em vez de max-width 90%, use 100% para preencher o container */
-    max-width: 550px; /* Mas não deixe ela ficar gigantesca em monitores UltraWide */
+    width: 100%; 
+    max-width: 550px; 
     height: auto;
-    border-radius: 20px; /* Bordas arredondadas dão o tom moderno */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4); /* Sombra para dar profundidade */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
 }
 
-/* 5. Features Section */
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -182,7 +181,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* 6. Form Section */
 .form-wrapper {
     background: var(--surface-color);
     max-width: 600px;
@@ -230,7 +228,6 @@ input:focus {
     margin-top: 20px;
 }
 
-/* 7. Footer */
 footer {
     text-align: center;
     padding: 40px;
@@ -239,25 +236,24 @@ footer {
     border-top: 1px solid var(--glass-border);
 }
 
-/* Responsividade Básica */
 @media (max-width: 768px) {
     #hero {
-        flex-direction: column; /* Coloca um embaixo do outro */
-        text-align: center; /* Centraliza o texto */
-        padding-top: 120px; /* Dá espaço para a Navbar fixa */
+        flex-direction: column; 
+        text-align: center; 
+        padding-top: 120px; 
     }
 
     .hero-btns {
-        justify-content: center; /* Centraliza os botões no mobile */
+        justify-content: center; 
     }
 
     #hero p {
         margin-left: auto;
-        margin-right: auto; /* Centraliza o parágrafo que tem max-width */
+        margin-right: auto; 
     }
     
     .hero-image-container {
-        justify-content: center; /* Centraliza a imagem no mobile */
+        justify-content: center; 
     }
     h1 { font-size: 2.5rem; }
     
